@@ -9,7 +9,7 @@ def FrequentWords(Text,k):
         Pattern=Text[i:k+i]
         Count.append(PatternCount(Text,Pattern))
     maxCount=max(Count)
-    for i in range(len(Text)-k):
+    for i in range(len(Text)-k+1):
         if Count[i]==maxCount:
             FrequentPatterns.append(Text[i:k+i])
             
