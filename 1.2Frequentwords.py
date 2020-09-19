@@ -5,7 +5,7 @@ def FrequentWords(Text,k):
     FrequentPatterns=[]
     Count=[]
     Final_frequentpatterns=[]
-    for i in range(len(Text)-k):
+    for i in range(len(Text)-k+1):
         Pattern=Text[i:k+i]
         Count.append(PatternCount(Text,Pattern))
     maxCount=max(Count)
@@ -24,7 +24,7 @@ def FrequentWords(Text,k):
 '''improve vision of FrequentWords_imp'''
 def FrequentWords_imp(Text,k):
     maxCount=0
-    for i in range(len(Text)-k):
+    for i in range(len(Text)-k+1):
         Pattern=Text[i:i+k]
         Count=PatternCount(Text,Pattern)
         if Count>maxCount:
