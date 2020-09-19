@@ -2,7 +2,7 @@
 def FrequencyTable(Text,k):
     freqMap={}
     n=len(Text)
-    for i in range(n-k):
+    for i in range(n-k+1):
         Pattern=Text[i:i+k]
         if Pattern not in freqMap.keys():
             freqMap[Pattern]=1
@@ -22,7 +22,7 @@ def FindClumps(Text,k,L,t):
     n=len(Text)
     Patterns=[]
     Final_Patterns=[]
-    for i in range(n-L):
+    for i in range(n-L+1):
         Window=Text[i:L+i]
         freMap=FrequencyTable(Window,k)
         for key,value in freMap.items():
