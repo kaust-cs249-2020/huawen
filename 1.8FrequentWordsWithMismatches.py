@@ -2,7 +2,7 @@ def FrequentWordsWithMismatches(Text,k,d):
     Patterns=[]
     n=len(Text)
     freqMap={}
-    for i in range(n-k):
+    for i in range(n-k+1):
         Pattern=Text[i:i+k]
         neighborhood=Neighbors(Pattern,d)
         for j in neighborhood:
