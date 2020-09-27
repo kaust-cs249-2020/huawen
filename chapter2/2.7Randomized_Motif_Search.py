@@ -127,7 +127,7 @@ def consensus_string_finder(matrix):
     return ''.join(consensus_string)
 
         
-def runtime_randomized_motif_search(time):
+def runtime_randomized_motif_search(time,Dnas,k,t):
     bestscore=float('inf')
     bestmotifs=[]
     for i in range(time):
@@ -143,5 +143,5 @@ Dnas=["CGCCCCTCTCGGGGGTGTTCAGTAAACGGCCA","GGGCGAGGTATGTGTAAGTGCCAAGGTGCCAG","TAG
       "TAGATCAAGTTTCAGGTGCACGTCGGTGAACC","AATCCACCAGCTCCACGTGCAATGTTGGCCTA"]
 k=8
 t=5
-runtime_randomized_motif_search(1000)
+runtime_randomized_motif_search(1000,Dnas,k,t)
 
