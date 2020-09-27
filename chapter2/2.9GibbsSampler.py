@@ -141,7 +141,7 @@ def Score(motifs,consensus_string):
         distances+=d
     return distances
 
-def runtime_gibbssampler(time):
+def runtime_gibbssampler(time,Dnas,k,t,N):
     bestmotifs=[]
     bestscore=float("inf")
     for i in range(time):
@@ -160,4 +160,4 @@ k=8
 t=5
 N=100
 
-runtime_gibbssampler(20)
+runtime_gibbssampler(20,Dnas,k,t,N)
